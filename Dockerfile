@@ -17,4 +17,4 @@ RUN rm forge-$FORGE_VERSION-installer.jar
 RUN mkdir -p $OVERRIDES_MODS_DIR
 RUN wget https://cdn.modrinth.com/data/rbJ7eS5V/versions/ILJrSvYW/$DI_JAR --directory-prefix=$OVERRIDES_MODS_DIR
 RUN echo "eula=true" > eula.txt
-ADD overrides/
+ADD overrides/ ./overrides
