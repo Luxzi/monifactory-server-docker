@@ -8,11 +8,11 @@ ARG DI_VERSION=3.0.7.1-1.20.1
 ARG DI_JAR=dcintegration-forge-$DI_VERSION.jar
 
 RUN apt-get -y update; apt-get -y install curl unzip
-RUN curl https://github.com/ThePansmith/Monifactory/releases/latest/download/server.zip -o server.zip
+RUN curl https://github.com/ThePansmith/Monifactory/releases/latest/download/server.zip -O
 RUN unzip server.zip
 RUN rm server.zip
 WORKDIR server
-RUN curl https://maven.minecraftforge.net/net/minecraftforge/forge/$FORGE_VERSION/forge-$FORGE_VERSION-installer.jar -o forge-$FORGE_VERSION-installer.jar
+RUN curl https://maven.minecraftforge.net/net/minecraftforge/forge/$FORGE_VERSION/forge-$FORGE_VERSION-installer.jar -O
 RUN java -jar forge-$FORGE_VERSION-installer.jar --installServer $FORGE_TEMPALTE
 RUN rm forge-$FORGE_VERSION-installer.jar
 RUN mkdir -p $OVERRIDES_MODS_DIR
