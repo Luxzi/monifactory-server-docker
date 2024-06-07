@@ -1,3 +1,5 @@
+FROM debian:latest
+
 ARG FORGE_VERSION=1.20.1-47.2.32
 ARG FORGE_TEMPALTE=forge-template-$FORGE_VERSION
 ARG OVERRIDES_DIR=overrides
